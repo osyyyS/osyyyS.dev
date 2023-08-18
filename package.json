@@ -2,13 +2,15 @@
   "name": "osyyys.dev",
   "version": "0.1.0",
   "private": true,
+  "SUPABASE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlvb2hxYWd2dGVtcW5wY3JubGFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIzNzQxMTEsImV4cCI6MjAwNzk1MDExMX0.jN0-0qAPWfbfKK9zFJTS9wSysdrGjJEvSLQDW0jeW9E",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.32.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.18",
     "next": "13.4.18",
