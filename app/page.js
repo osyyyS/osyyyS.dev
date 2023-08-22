@@ -5,7 +5,10 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Link href="/clicker">Go to clicker</Link>
+      <video autoPlay muted loop className={styles.video}>
+        <source src="./ZOOM.mp4" type="video/mp4" />
+      </video>
+      <h1 className={styles.osyyyS}>osyyyS</h1>
     </main>
   )
 }
