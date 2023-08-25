@@ -28,7 +28,7 @@ export default function Home() {
             <code className={styles.code}>under construction...</code>
           </p>
           <p>
-            <a href="https://www.youtube.com/channel/UCc3OkBbWKrduly3Lu59jzEg"><code className={styles.code}>Source code</code></a>
+            <a href="https://github.com/osyyyS/osyyyS.dev"><code className={styles.code}>Source code</code></a>
           </p>
         </div>
 
