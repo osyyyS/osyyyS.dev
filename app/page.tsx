@@ -3,11 +3,17 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
+import React from 'react';
+import { useState } from 'react';
 
 export default function Home() {
+  const [copied, setCopied] = useState('');
 
   function discordClicked() {
     navigator.clipboard.writeText("osyyyS")
+    setCopied(" copied!")
+    setTimeout(() => { setCopied("") }, 2000)
+    console.log("asdasd")
   }
 
   return (
@@ -15,10 +21,14 @@ export default function Home() {
       <video autoPlay muted loop className={styles.video}>
         <source src="./ZOOM.mp4" type="video/mp4" />
       </video>
+
       <div className={styles.foreground}>
         <div className={styles.description}>
           <p>
             <code className={styles.code}>under construction...</code>
+          </p>
+          <p>
+            <a href="https://www.youtube.com/channel/UCc3OkBbWKrduly3Lu59jzEg"><code className={styles.code}>Source code</code></a>
           </p>
         </div>
 
@@ -50,7 +60,7 @@ export default function Home() {
             className={styles.card}
           >
             <h2>
-              Discord 
+              Discord
               <Image
                 src="/icons/clipboard.svg"
                 alt="clipboard"
@@ -60,32 +70,44 @@ export default function Home() {
                 priority
               />
             </h2>
-            <p>osyyyS</p>
+            <p>osyyyS {copied}</p>
           </a>
 
           <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://www.youtube.com/channel/UCc3OkBbWKrduly3Lu59jzEg"
             className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <h2>
-              Templates <span>-&gt;</span>
+              Youtube
+              <Image
+                src="/icons/youtube.svg"
+                alt="youtube"
+                className={styles.icon}
+                width={40}
+                height={20}
+                priority
+              />
             </h2>
-            <p>Explore the Next.js 13 playground.</p>
+            <p>Aged gaming videos</p>
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="/projects"
             className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <h2>
-              Deploy <span>-&gt;</span>
+              Projects
+              <Image
+                src="/icons/rocket.svg"
+                alt="rocket"
+                className={styles.icon}
+                width={40}
+                height={18}
+                priority
+              />
             </h2>
             <p>
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
+              Comming soon...
             </p>
           </a>
         </div>
