@@ -62,11 +62,11 @@ export default function Home() {
             <h2>
               Discord
               <Image
-                src="/icons/clipboard.svg"
+                src="/icons/discord.svg"
                 alt="clipboard"
                 className={styles.icon}
                 width={40}
-                height={20}
+                height={18}
                 priority
               />
             </h2>
